@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TeamPRO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="data:image/png;base64,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" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- Font Awesome Icon Library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="ProjectsStudents.css" rel="stylesheet">
+  <style>
+    @media screen and (min-width: 701px) and (max-width:3000px){
+   .avatar {
+     margin-left: 10px;
+     vertical-align: middle;
+     margin-bottom: 20px;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+   }
+   .avatar2{
+     vertical-align: middle;
+     
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+   }
+    }
+    @media screen and (min-width: 0px) and (max-width:700px){
+   .avatar {
+   display: none;
+   }
+    }
+   </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto title" ><a href="index.html">TeamPRO<br/><span style="font-size: 15px;" class="typed" data-typed-items="Elevate your Skills to Escape Velocity"></span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <nav  class="nav-menu d-none d-lg-block">
+        <ul>
+          <li ><a href="studentIndex.html" style="font-family:poppins ; font-weight: 500; font-size: medium;">Home</a></li>
+          
+          <li class="active"><a href="ProjectsStudents.html" style="font-family:poppins ; font-weight: 500;font-size: medium;">Projects</a></li>
+          <li><a href="contactStudents.html" style="font-family:poppins ; font-weight: 500;font-size: medium;">Contact</a></li>
+         
+
+        </ul>
+      </nav><!-- .nav-menu -->
+     <!-- Example single danger button -->
+<div class="btn-group avatar" >
+  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar2">
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="ProfileStudents.html">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="index.html">Log Out</a>
+  </div>
+</div>
+    <!-- <a href="ProfileStudents.html"> <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar"></a>  -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+<section >
+    <br/>
+   <div class="Project_view_all">
+    <br/><br/>
+     <div class="row">
+       <div class="col-xl-3 col-sm-12">
+         <br>
+    <div class="card">
+         <div class="title text-center">
+          <p><i class="bx bx-sort-down"></i>Filters</p>
+          <hr/>
+        </div>
+        <div class="row">
+          <div class="form-group col-12">
+            <label for="Date"><b>Choose date:</b></label><br/>
+            <input class="form-control" type="date" placeholder="Choose Date">
+          </div>
+          <div class="form-group col-12">
+            <label for="Amount"><b>Amount:</b></label><br/>
+            <input class="form-control" type="number" placeholder="Enter Amount">
+          </div>
+          <div class="form-group col-12">
+            <label for="Duration"><b>Max Duration</b></label><br/>
+            <select id="inputState" class="form-control">
+              <option >1 Day</option>
+              <option>2 Day</option>
+              <option>3 Day</option>
+              <option >4 Day</option>
+              <option>5 Day</option>
+              
+            </select>
+          </div>
+          
+          
+        </div>
+        </div>
+       </div>
+       
+       <div class="col-xl-9 col-sm-12">
+         <div class="row">
+        <div class="col-12">
+         <div class="card">
+            <div class="row">
+              <div class="col-8">
+                  <p><b>Business Development (Sales)</b><br/>
+                  <span><b>SkillArena</b></span></p>
+                  <div class="work_From_home"> 
+                    <p><a href="#" class="home"><i class="bx bx-home-alt"></i>Work from home</a></p>
+                  </div>
+              </div>
+              <div class="col-4">
+                <div class="float-right">
+                <img src="https://internshala.com/cached_uploads/logo%2F5fdf9c93a5cbc1608490131.jpg"/>
+                </div>
+              </div>
+            </div>
+            <div class="row Project-Details">
+              <div class="col">
+                <p><a href="#" class="startDate"><i class="bx bx-paper-plane"></i>START DATE</a>
+                <br/><span>Immediately</span></p>
+              </div>
+              <div class="col">
+                <p><a href="#" class="startDate"><i class="bx bx-calendar-event"></i>DURATION</a>
+                <br/><span>1 month</span></p>
+              </div>
+              <div class="col">
+                <p><a href="#" class="startDate"><i class="bx  bx-rename"></i>STIPEND</a>
+                <br/><span>₹3000/month</span></p>
+              </div>
+              <div class="col">
+                <p><a href="#" class="startDate"><i class="bx bx-time"></i>APPLY BY</a>
+                <br/><span>1 Mar'21</span></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3"></div>
+            <div class="col-8">
+              <div class="float-right">
+                <p class="link"><a href="#" class="startDate">Interested<i class="bx bx-right-arrow-alt"></i></a></p>
+            </div>
+            </div>
+            </div>
+         </div>
+        
+        
+        </div>
+       
+        <div class="col-12">
+          <div class="card">
+             <div class="row">
+               <div class="col-8">
+                   <p><b>Business Development (Sales)</b><br/>
+                   <span><b>SkillArena</b></span></p>
+                   <div class="work_From_home"> 
+                     <p><a href="#" class="home"><i class="bx bx-home-alt"></i>Work from home</a></p>
+                   </div>
+               </div>
+               <div class="col-4">
+                 <div class="float-right">
+                 <img src="https://internshala.com/cached_uploads/logo%2F5fdf9c93a5cbc1608490131.jpg"/>
+                 </div>
+               </div>
+             </div>
+             <div class="row Project-Details">
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-paper-plane"></i>START DATE</a>
+                 <br/><span>Immediately</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-calendar-event"></i>DURATION</a>
+                 <br/><span>1 month</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx  bx-rename"></i>STIPEND</a>
+                 <br/><span>₹3000/month</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-time"></i>APPLY BY</a>
+                 <br/><span>1 Mar'21</span></p>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-3"></div>
+             <div class="col-8">
+               <div class="float-right">
+                 <p class="link"><a href="#" class="startDate">Interested<i class="bx bx-right-arrow-alt"></i></a></p>
+             </div>
+             </div>
+             </div>
+          </div>
+         
+         
+         </div>
+         <div class="col-12">
+          <div class="card">
+             <div class="row">
+               <div class="col-8">
+                   <p><b>Business Development (Sales)</b><br/>
+                   <span><b>SkillArena</b></span></p>
+                   <div class="work_From_home"> 
+                     <p><a href="#" class="home"><i class="bx bx-home-alt"></i>Work from home</a></p>
+                   </div>
+               </div>
+               <div class="col-4">
+                 <div class="float-right">
+                 <img src="https://internshala.com/cached_uploads/logo%2F5fdf9c93a5cbc1608490131.jpg"/>
+                 </div>
+               </div>
+             </div>
+             <div class="row Project-Details">
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-paper-plane"></i>START DATE</a>
+                 <br/><span>Immediately</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-calendar-event"></i>DURATION</a>
+                 <br/><span>1 month</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx  bx-rename"></i>STIPEND</a>
+                 <br/><span>₹3000/month</span></p>
+               </div>
+               <div class="col">
+                 <p><a href="#" class="startDate"><i class="bx bx-time"></i>APPLY BY</a>
+                 <br/><span>1 Mar'21</span></p>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-3"></div>
+             <div class="col-8">
+               <div class="float-right">
+                 <p class="link"><a href="#" class="startDate">Interested<i class="bx bx-right-arrow-alt"></i></a></p>
+             </div>
+             </div>
+             </div>
+          </div>
+         
+         
+         </div>
+        
+         <div class="col-12">
+           <div class="card">
+              <div class="row">
+                <div class="col-8">
+                    <p><b>Business Development (Sales)</b><br/>
+                    <span><b>SkillArena</b></span></p>
+                    <div class="work_From_home"> 
+                      <p><a href="#" class="home"><i class="bx bx-home-alt"></i>Work from home</a></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                  <div class="float-right">
+                  <img src="https://internshala.com/cached_uploads/logo%2F5fdf9c93a5cbc1608490131.jpg"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row Project-Details">
+                <div class="col">
+                  <p><a href="#" class="startDate"><i class="bx bx-paper-plane"></i>START DATE</a>
+                  <br/><span>Immediately</span></p>
+                </div>
+                <div class="col">
+                  <p><a href="#" class="startDate"><i class="bx bx-calendar-event"></i>DURATION</a>
+                  <br/><span>1 month</span></p>
+                </div>
+                <div class="col">
+                  <p><a href="#" class="startDate"><i class="bx  bx-rename"></i>STIPEND</a>
+                  <br/><span>₹3000/month</span></p>
+                </div>
+                <div class="col">
+                  <p><a href="#" class="startDate"><i class="bx bx-time"></i>APPLY BY</a>
+                  <br/><span>1 Mar'21</span></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-3"></div>
+              <div class="col-8">
+                <div class="float-right">
+                  <p class="link"><a href="#" class="startDate">Interested<i class="bx bx-right-arrow-alt"></i></a></p>
+              </div>
+              </div>
+              </div>
+           </div>
+          
+          
+          </div>
+      </div>
+      </div>
+      
+     </div>
+   </div>
+</section>
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>TeamPRO</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="#">Team @TeamPRO</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
